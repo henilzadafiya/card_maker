@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controller/home_screen_controller.dart';
-import 'settings_screen.dart';
 
 class CardScreen extends StatefulWidget {
   const CardScreen({super.key});
@@ -27,7 +26,6 @@ class _CardScreenState extends State<CardScreen> {
             crossAxisCount: 2, crossAxisSpacing: 5, mainAxisSpacing: 5),
         itemCount: homeScreenController.cardList.length,
         itemBuilder: (BuildContext context, int index) {
-          String inx = 'images/${index + 1}.jpg';
           return GestureDetector(
             onTap: () {
               Get.to(DesignScreen(image: homeScreenController.cardList[index]), arguments: index);

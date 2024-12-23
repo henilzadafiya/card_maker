@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen>
     _controller.forward().then((value) {
       Timer(
         const Duration(seconds: 1),
-        () => Get.off(HomeScreen()),
+        () => Get.off(const HomeScreen()),
       );
     });
   }

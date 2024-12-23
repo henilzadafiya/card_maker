@@ -5,22 +5,23 @@ import 'package:get/get.dart';
 class HomeScreenController extends GetxController {
   RxBool loading = true.obs;
   RxBool showList = false.obs;
-  RxInt? selectBackground = 0.obs;
+  // RxInt? selectBackground = 0.obs;
+  var selectedIndex = (0).obs;
   RxList cardList = [
-    'images/1.jpg',
-    'images/2.jpg',
-    'images/3.jpg',
-    'images/4.jpg',
-    'images/5.jpg',
-    'images/6.jpg',
-    'images/7.jpg',
-    'images/8.jpg',
-    'images/9.jpg',
-    'images/10.jpg',
-    'images/11.jpg',
-    'images/12.jpg',
-    'images/13.jpg',
-    'images/14.jpg',
+    'images/cards/0.jpg',
+    'images/cards/1.jpg',
+    'images/cards/2.jpg',
+    'images/cards/3.jpg',
+    'images/cards/4.jpg',
+    'images/cards/5.jpg',
+    'images/cards/6.jpg',
+    'images/cards/7.jpg',
+    'images/cards/8.jpg',
+    'images/cards/9.jpg',
+    'images/cards/10.jpg',
+    'images/cards/11.jpg',
+    'images/cards/12.jpg',
+    // 'images/cards/13.jpg',
   ].obs;
 
 
@@ -31,15 +32,17 @@ class HomeScreenController extends GetxController {
   }
 
 
-
-  RxInt fetchSelectBackground({int? index}){
-    selectBackground = index as RxInt?;
-    // print(index);
-    // print(selectBackground);
-    return selectBackground!;
+  void selectBackground(int index) {
+    selectedIndex.value = index; // Update the selected index
   }
-  RxInt fetchBackground(){
-    // print(selectBackground);
-    return selectBackground!;
-  }
+  // RxInt fetchSelectBackground({int? index}){
+  //   selectBackground = index as RxInt?;
+  //   // print(index);
+  //   // print(selectBackground);
+  //   return selectBackground!;
+  // }
+  // RxInt fetchBackground(){
+  //   // print(selectBackground);
+  //   return selectBackground!;
+  // }
 }
